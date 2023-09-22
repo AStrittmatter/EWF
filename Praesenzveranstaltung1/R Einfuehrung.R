@@ -29,7 +29,7 @@ hist(???)
 group_mean <- tapply(???, ???, ???)
 group_mean
 
-barplot(group_mean, 
+barplot(???, 
         main="Durchschnittliche Wirkung pro Insektenspray",
         xlab="Insektenspray", ylab="Durchschnittliche Wirkung")
 
