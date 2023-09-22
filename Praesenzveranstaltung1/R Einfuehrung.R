@@ -6,7 +6,7 @@
 data(InsectSprays)
 
 # Zeigen Sie die ersten Zeilen des Datensatzes an.
-head(InsectSprays)
+head(???)
 
 # Beantworten der Frage:
 # Welche Variablen sind im Datensatz enthalten?
@@ -14,7 +14,7 @@ head(InsectSprays)
 
 # Frage 2: Deskriptive Statistik
 # Zeigen Sie eine statistische Zusammenfassung des Datensatzes an.
-summary(InsectSprays)
+summary(???)
 
 # Beantworten der Frage:
 # Wie hoch ist die durchschnittliche Wirkung aller Insektensprays zusammen?
@@ -23,15 +23,18 @@ summary(InsectSprays)
 
 # Frage 3: Visualisierung
 # Ein Histogramm für die Anzahl der behandelten Insekten (count) erstellen.
-hist(InsectSprays$count)
+hist(???)
 
 # Erstellen Sie ein Balkendiagramm der durchschnittlichen Wirkung jedes Insektensprays.
-barplot(tapply(InsectSprays$count, InsectSprays$spray, mean), 
+group_mean <- tapply(???, ???, ???)
+group_mean
+
+barplot(group_mean, 
         main="Durchschnittliche Wirkung pro Insektenspray",
         xlab="Insektenspray", ylab="Durchschnittliche Wirkung")
 
 # Erstellen Sie ein Boxplot der Wirkungen der Insektensprays.
-boxplot(count ~ spray, data=InsectSprays, 
+boxplot(???, data=???, 
         main="Verteilung der Wirkungen der Insektensprays",
         xlab="Insektenspray", ylab="Wirkung")
 
@@ -45,7 +48,7 @@ boxplot(count ~ spray, data=InsectSprays,
 
 # Frage 4: Konditionaler Mittelwert
 # Berechnen Sie den Durchschnitt (Mittelwert) der Wirkung des Sprays "sprayB".
-mean_sprayB <- mean(InsectSprays$count[InsectSprays$spray == "B"])
+mean_sprayB <- mean(???)
 mean_sprayB
 
 # Beantworten der Frage:
@@ -54,7 +57,7 @@ mean_sprayB
 
 # Frage 5: Variabilität
 # Berechnen Sie die Standardabweichung der Wirkung des Sprays "sprayD".
-sd_sprayD <- sd(InsectSprays$count[InsectSprays$spray == "D"])
+sd_sprayD <- sd(???)
 sd_sprayD
 
 # Beantworten der Frage:
@@ -63,7 +66,7 @@ sd_sprayD
 
 # Frage 6: Korrelation
 # Berechnen Sie die Korrelation zwischen den Wirkungen der Sprays "sprayE" und "sprayF".
-cor_sprayE_F <- cor(InsectSprays$count[InsectSprays$spray == "E"], InsectSprays$count[InsectSprays$spray == "F"])
+cor_sprayE_F <- cor(???, ???)
 cor_sprayE_F
 
 # Beantworten der Frage:
