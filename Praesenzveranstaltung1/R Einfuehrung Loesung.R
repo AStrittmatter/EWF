@@ -36,7 +36,7 @@ boxplot(count ~ spray, data=InsectSprays,
         xlab="Insektenspray", ylab="Wirkung")
 
 # Beantworten der Fragen:
-# Welche Art der Verteilung ist zu erkenne
+# Welche Art der Verteilung ist zu erkennen
 # Antwort: Rechtschiefe Verteilung
 # Welches Insektenspray hat die höchste durchschnittliche Wirkung?
 # Antwort: Das Insektenspray "sprayF" hat die höchste durchschnittliche Wirkung.
