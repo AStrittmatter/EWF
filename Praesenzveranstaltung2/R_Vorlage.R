@@ -8,75 +8,82 @@
 # Packages laden
 library(ggplot2)
 
-
-
-# Daten in den Workspace laden (die Daten sind im Projekt)
+# Daten laden 
 load("classize.RData")
-
 
 # Verschaffen Sie sich mit Hilfe der summary und des RStudio Viewer (View()) einen 
 # ersten Eindruck. 
 
-summary(data)
+summary(???)
 
-View(data)
+View(???)
 
 # Überprüfen Sie, wie viele Observationen der Datensatz enthält.
-nrow(data)
+nrow(???)
 
 ###########################
 # Deskriptive Statistiken #
 ###########################
 
 # Mittelwerte
-mean(data$tscorek)
-mean(data$classize)
+???(data$tscorek)
+???(data$classize)
 
 # Varianzen
-var(data$tscorek)
-var(data$classize)
+???(data$tscorek)
+???(data$classize)
 
 # Kovarianz
-cov(data$tscorek,data$classize)
+???(data$tscorek,data$classize)
 
 ######################
 # Regressionsanalyse #
 ######################
 
 #Steigungsparameter
-beta_1 = cov(data$tscorek,data$classize)/var(data$classize)
+beta_1 = cov(???)/var(???)
 print(beta_1)
 
 #Achsenabschnittsparameter
-beta_0 = mean(data$tscorek) - beta_1*mean(data$classize)
+beta_0 = mean(???) - beta_1*mean(???)
 print(beta_0)
 
 
 # Sie wollen nun den Effekt der Klassengrösse auf die Testergebnisse schätzen
-ols <- lm(tscorek ~ classize, data) 
+ols <- lm(??? ~ ???, data) 
 summary(ols)
 
-# R-Quadrat
-var(ols$residuals)
-var(data$tscorek)
-
-R_quadrat = 1-var(ols$residuals)/var(data$tscorek)
-print(R_quadrat)
 
 # Plot Fitted Values
 plot(tscorek ~ classize, data)
 abline(coef(ols), col = "red")
 
-# Gefittete Werte
+#############
+# R-Quadrat #
+#############
 
-y_hat = beta_0 + beta_1*10
+ols$residuals
+
+var(ols$residuals)
+var(data$tscorek)
+
+R_quadrat = 1-var(???)/var(data$tscorek)
+print(R_quadrat)
+
+###################
+# Gefittete Werte #
+###################
+
+y_hat = ???
 print(y_hat)
 
 new_data <- data[1,]
 new_data$classize <- 10
 predict(ols, newdata = new_data)
 
-# Goesse der Koeffizienten
+############################
+# Goesse der Koeffizienten #
+############################
 
 ols$coefficients
 ols$coefficients["classize"]
@@ -90,14 +97,5 @@ ols$coefficients["classize"]/sd(data$tscorek)
 (29-10)*ols$coefficients["classize"]/sd(data$tscorek)
 
 
-# Sie wollen nun den Effekt einem kostenlosen Mittagessen auf die Testergebnisse schätzen
 
-ols <- lm(tscorek ~ freelunk, data) 
-summary(ols)
-
-
-# Sie wollen nun den Effekt der der Erfahrung der Lehrer auf die Testergebnisse schätzen
-
-ols <- lm(tscorek ~ totexpk, data) 
-summary(ols)
 
