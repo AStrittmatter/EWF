@@ -28,3 +28,4 @@ dependencies:
   - r-sandwich
   - r-diagrammer
   - r-neuralnet
+  - r-mlbench
