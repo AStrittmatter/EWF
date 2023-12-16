@@ -30,3 +30,5 @@ dependencies:
   - r-neuralnet
   - r-mlbench
   - r-titanic
+  - r-install.load
+  - r-ivreg
