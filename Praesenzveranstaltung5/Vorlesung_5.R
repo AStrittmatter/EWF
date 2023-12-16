@@ -5,16 +5,11 @@
 
 # Settings ---------
 
-# Working directory setzen
-setwd("...")
-
 # Packages laden
-install.packages("install.load")
-library(install.load)
 install_load("ggplot2")
 
 # Daten laden
-winequality=read.csv("winequality.csv")
+winequality=read.csv("~/Praesenzveranstaltung5/winequality.csv")
 
 # Daten inspizieren ----------
 dim(winequality) # Anzahl Zeilen und Spalten
