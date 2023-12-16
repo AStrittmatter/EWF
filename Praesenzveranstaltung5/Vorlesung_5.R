@@ -138,7 +138,7 @@ var(b_alcohol_cor_vector)
 
 # Instrumental Variable Schätzung --------------------------------
 
-install_load("ivreg")
+library("ivreg")
 
 ## data
 data("CigaretteDemand", package = "ivreg")
