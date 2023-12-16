@@ -6,7 +6,7 @@
 # Settings ---------
 
 # Packages laden
-install_load("ggplot2")
+library("ggplot2")
 
 # Daten laden
 winequality=read.csv("~/Praesenzveranstaltung5/winequality.csv")
